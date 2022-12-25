@@ -3,19 +3,19 @@
 
 ##### Взять официальный докер образ с **nginx** и выкачать его при помощи `docker pull`
 
-- ![part-1-1](/misc/images/docker1-1.png)
+- ![part-1-1](../misc/images/docker1-1.png)
 
 ##### Проверить наличие докер образа через `docker images`
 
-- ![part-1-2](/misc/images/docker1-2.png)
+- ![part-1-2](../misc/images/docker1-2.png)
 
 ##### Запустить докер образ через `docker run -d [image_id|repository]`
 
-- ![part-1-3](/misc/images/docker1-3.png)
+- ![part-1-3](../misc/images/docker1-3.png)
 
 ##### Проверить, что образ запустился через `docker ps`
 
-- ![part-1-4](/misc/images/docker1-4.png)
+- ![part-1-4](../misc/images/docker1-4.png)
 
 ##### Посмотреть информацию о контейнере через `docker inspect [container_id|container_name]`
 ##### По выводу команды определить и поместить в отчёт размер контейнера, список замапленных портов и ip контейнера
