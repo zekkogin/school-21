@@ -10,7 +10,7 @@
 `cat /etc/issue.`
 - Вставьте скриншот с выводом команды.
 
-![install](misc/img/part1.1.png)
+![install](../misc/img/part1.1.png)
 
 ## Part 2. Создание пользователя
 
@@ -21,7 +21,7 @@
 `cat /etc/passwd`
 - Вставьте скриншот с выводом команды.
 
-![user](misc/img/part2.1.png)
+![user](../misc/img/part2.1.png)
 
 ## Part 3. Настройка сети ОС
 
@@ -29,11 +29,11 @@
 - sudo hostname user-1
 - перезайти за пользователя для отображения в консоли
 ##### Установить временную зону, соответствующую вашему текущему местоположению.
-![install](misc/img/part3.1-timezone.png)
+![install](../misc/img/part3.1-timezone.png)
 ##### Вывести названия сетевых интерфейсов с помощью консольной команды.
 
 - lo (loopback device) – виртуальный интерфейс, присутствующий по умолчанию в любом Linux. Он используется для отладки сетевых программ и запуска серверных приложений на локальной машине. С этим интерфейсом всегда связан адрес 127.0.0.1. У него есть dns-имя – localhost. Посмотреть привязку можно в файле /etc/hosts.
-![interfaces](misc/img/part3.2-ifconfig.png)
+![interfaces](../misc/img/part3.2-ifconfig.png)
 
 ##### Используя консольную команду получить ip адрес устройства, на котором вы работаете, от DHCP сервера. 
 
@@ -41,26 +41,26 @@
 
 - DHCP — протокол прикладного уровня модели TCP/IP, служит для назначения IP-адреса клиенту. Это следует из его названия — Dynamic Host Configuration Protocol. IP-адрес можно назначать вручную каждому клиенту, то есть компьютеру в локальной сети. Но в больших сетях это очень трудозатратно, к тому же, чем больше локальная сеть, тем выше возрастает вероятность ошибки при настройке. Поэтому для автоматизации назначения IP был создан протокол DHCP.
 
-![dhcp](misc/img/part-3.3-dhcp.png)
+![dhcp](../misc/img/part-3.3-dhcp.png)
 
 ##### Определить и вывести на экран внешний ip-адрес шлюза (ip) и внутренний IP-адрес шлюза, он же ip-адрес по умолчанию (gw). 
-![netstat](misc/img/part-3.4-ip-route.png)
+![netstat](../misc/img/part-3.4-ip-route.png)
 ##### Задать статичные (заданные вручную, а не полученные от DHCP сервера) настройки ip, gw, dns (использовать публичный DNS серверы, например 1.1.1.1 или 8.8.8.8).
-![netstat-edit](misc/img/part-3.5-netplan.png)
+![netstat-edit](../misc/img/part-3.5-netplan.png)
 ##### Перезагрузить виртуальную машину. Убедиться, что статичные сетевые настройки (ip, gw, dns) соответствуют заданным в предыдущем пункте.
-![netstat-after-reboot](misc/img/part-3.5-netplan1.png)
+![netstat-after-reboot](../misc/img/part-3.5-netplan1.png)
 
 - Успешно пропинговать удаленные хосты 1.1.1.1 и ya.ru и вставить в отчёт скрин с выводом команды. В выводе команды должна быть фраза "0% packet loss".
 
-![ping](misc/img/part-3.6-ping.png)
-![ping-ya-ru](misc/img/part-3.6-ping-ya.ru.png)
+![ping](../misc/img/part-3.6-ping.png)
+![ping-ya-ru](../misc/img/part-3.6-ping-ya.ru.png)
 
 ## Part 4. Обновление ОС
 
 ##### Обновить системные пакеты до последней на момент выполнения задания версии.  
 
 - После обновления системных пакетов, если ввести команду обновления повторно, должно появится сообщение, что обновления отсутствуют.
-![update-linux](misc/img/part4.0.png)
+![update-linux](../misc/img/part4.0.png)
 
 ## Part 5. Использование команды **sudo**
 
@@ -69,7 +69,7 @@
 - Sudo - это альтернатива su для выполнения команд с правами суперпользователя (root). В отличие от su, который запускает оболочку с правами root и даёт всем дальнейшим командам root-права, sudo предоставляет временное повышение привилегий для одной команды. Предоставляя привилегии root только при необходимости, sudo снижает вероятность того, что опечатка или ошибка в выполняемой команде произведут в системе разрушительные действия.
 
 - Поменять hostname ОС от имени пользователя, созданного в пункте [Part 2](#part-2-создание-пользователя) (используя sudo).
-![sudo](misc/img/part-5.0.png)
+![sudo](../misc/img/part-5.0.png)
 
 ## Part 6. Установка и настройка службы времени
 
@@ -79,16 +79,16 @@
 - Вывод следующей команды должен содержать `NTPSynchronized=yes`: \
   `timedatectl show`
 - Вставить скрины с корректным временем и выводом команды в отчёт.
-![timedate](misc/img/part-6.0.png)
+![timedate](../misc/img/part-6.0.png)
 
 ## Part 7. Установка и использование текстовых редакторов 
 
 ##### Установить текстовые редакторы **VIM** (+ любые два по желанию **NANO**, **MCEDIT**, **JOE** и т.д.)  
 ##### Используя каждый из трех выбранных редакторов, создайте файл *test_X.txt*, где X -- название редактора, в котором создан файл. Напишите в нём свой никнейм, закройте файл с сохранением изменений.  
 
-![vim-0](misc/img/part-7-vim.png)
-![nano-0](misc/img/part-7-nano.png)
-![joe-0](misc/img/part-7-joe.png)
+![vim-0](../misc/img/part-7-vim.png)
+![nano-0](../misc/img/part-7-nano.png)
+![joe-0](../misc/img/part-7-joe.png)
 
 - В отчёте укажите, что сделали для выхода с сохранением изменений.
 
@@ -96,9 +96,9 @@
 
 ##### Используя каждый из трех выбранных редакторов, откройте файл на редактирование, отредактируйте файл, заменив никнейм на строку "21 School 21", закройте файл без сохранения изменений.
 
-![vim-1](misc/img/part-7.0-vim.png)
-![nano-1](misc/img/part-7.0-nano.png)
-![jeo-1](misc/img/part-7.0-joe.png)
+![vim-1](../misc/img/part-7.0-vim.png)
+![nano-1](../misc/img/part-7.0-nano.png)
+![jeo-1](../misc/img/part-7.0-joe.png)
 
 - В отчёте укажите, что сделали для выхода без сохранения изменений.
 
@@ -106,18 +106,18 @@
 
 ##### Используя каждый из трех выбранных редакторов, отредактируйте файл ещё раз (по аналогии с предыдущим пунктом), а затем освойте функции поиска по содержимому файла (слово) и замены слова на любое другое.
 
-![vim-2](misc/img/part-7.00-vim.png)
-![nano-2](misc/img/part-7.00-nano.png)
-![joe-2](misc/img/part-7.00-joe.png)
+![vim-2](../misc/img/part-7.00-vim.png)
+![nano-2](../misc/img/part-7.00-nano.png)
+![joe-2](../misc/img/part-7.00-joe.png)
 
 - **Find**: **Vim** SHIFT + ';' -> /pattern   **Replace**: SHIFT + ';' -> :s/foo/bar/
 - **Find**: **Nano** ctrl + W -> pattern   **Replace**: ctrl + \ -> pattern to search -> pattern to replace
 - **Find**: **Joe** ctrl + KF -> pattern    **Replace**: ctrl + KF -> R -> pattern to replace
 
-![vim-3](misc/img/part-7.000-vim.png)
-![nano-3](misc/img/part-7.000-nano.png)
-![joe-3](misc/img/part-7.000-joe.png)
-![joe-4](misc/img/part-7.0000-joe.png)
+![vim-3](../misc/img/part-7.000-vim.png)
+![nano-3](../misc/img/part-7.000-nano.png)
+![joe-3](../misc/img/part-7.000-joe.png)
+![joe-4](../misc/img/part-7.0000-joe.png)
 
 ## Part 8. Установка и базовая настройка сервиса **SSHD**
 
@@ -127,7 +127,7 @@
 ##### Используя команду ps, показать наличие процесса sshd. Для этого к команде нужно подобрать ключи.
 - В отчёте объяснить значение команды и каждого ключа в ней.
 - ps -C sshd (-C поиск по идентификатору)
-![ps-netstat](misc/img/part-8-ps-sshd.png)
+![ps-netstat](../misc/img/part-8-ps-sshd.png)
 ##### Перезагрузить систему.
 - В отчёте опишите, что сделали для выполнения всех пяти пунктов (можно как текстом, так и скриншотами).
 - **Выполненные команды:**
@@ -142,7 +142,7 @@
 
 `tcp 0 0 0.0.0.0:2022 0.0.0.0:* LISTEN`
 
-![netstat](misc/img/part-8-netstat-tan.png)
+![netstat](../misc/img/part-8-netstat-tan.png)
 
 - В отчёте объяснить значение ключей -tan, значение каждого столбца вывода, значение 0.0.0.0.
 
@@ -191,14 +191,14 @@
   - с процессом syslog, найденным, используя поиск 
   - с добавленным выводом hostname, clock и uptime 
 
-![htop-pid](misc/img/part-9-htop-pid.png)
-![htop-cpu](misc/img/part-9-htop-cpu.png)
-![htop-mem](misc/img/part-9-htop-mem.png)
-![htop-time](misc/img/part-9-htop-time.png)
-![htop-pid](misc/img/part-9-htop-pid.png)
-![htop-clock](misc/img/part-9-sshd.png)
-![htop-clock](misc/img/part-9-sysloh.png)
-![htop-clock](misc/img/part-9-htop-clock-uptime-hostname.png)
+![htop-pid](../misc/img/part-9-htop-pid.png)
+![htop-cpu](../misc/img/part-9-htop-cpu.png)
+![htop-mem](../misc/img/part-9-htop-mem.png)
+![htop-time](../misc/img/part-9-htop-time.png)
+![htop-pid](../misc/img/part-9-htop-pid.png)
+![htop-clock](../misc/img/part-9-sshd.png)
+![htop-clock](../misc/img/part-9-sysloh.png)
+![htop-clock](../misc/img/part-9-htop-clock-uptime-hostname.png)
 
 ## Part 10. Использование утилиты **fdisk**
 
@@ -246,12 +246,12 @@
 ##### Вывести размер папок /home, /var, /var/log (в байтах, в человекочитаемом виде)
 
 - В отчёт вставить скрины с выводом всех использованных команд.
-![du-home](misc/img/part-12-du-home.png)
-![du-var](misc/img/part-12-du-var.png)
-![du-var-log](misc/img/part-12-du-var-log.png)
+![du-home](../misc/img/part-12-du-home.png)
+![du-var](../misc/img/part-12-du-var.png)
+![du-var-log](../misc/img/part-12-du-var-log.png)
 
 ##### Вывести размер всего содержимого в /var/log (не общее, а каждого вложенного элемента, используя *)
-![du-var-log](misc/img/part-12-du-varlog-a.png)
+![du-var-log](../misc/img/part-12-du-varlog-a.png)
 
 ## Part 13. Установка и использование утилиты **ncdu**
 
@@ -259,10 +259,10 @@
 ##### Вывести размер папок /home, /var, /var/log.
 
 - Размеры должны примерно совпадать с полученными в [Part 12](#part-12-использование-утилиты-du).
-![ncdu1](misc/img/part-13-home.png)
-![ncdu2](misc/img/part-13-home1.png)
-![ncdu3](misc/img/part-13-var.png)
-![ncdu4](misc/img/part-13-var-log.png)
+![ncdu1](../misc/img/part-13-home.png)
+![ncdu2](../misc/img/part-13-home1.png)
+![ncdu3](../misc/img/part-13-var.png)
+![ncdu4](../misc/img/part-13-var-log.png)
 
 ## Part 14. Работа с системными журналами
 
@@ -274,12 +274,12 @@
 - Написать в отчёте время последней успешной авторизации, имя пользователя и метод входа в систему.
 - Time 19:44:13 zekkogin login[648]
 
-![auth](misc/img/part-14-login.png)
+![auth](../misc/img/part-14-login.png)
 
 - Перезапустить службу SSHd.
 - Вставить в отчёт скрин с сообщением о рестарте службы (искать в логах).
 
-![syslog](misc/img/part-14-sshd-restart.png)
+![syslog](../misc/img/part-14-sshd-restart.png)
 
 ## Part 15. Использование планировщика заданий **CRON**
 
@@ -288,9 +288,9 @@
 - Вывести на экран список текущих заданий для CRON.
 - Вставить в отчёт скрины со строчками о выполнении и списком текущих задач.
 
-![crontab](misc/img/part-15-crontab-l.png)
-![crontab-uptime](misc/img/part-15-cron-uptime.png)
+![crontab](../misc/img/part-15-crontab-l.png)
+![crontab-uptime](../misc/img/part-15-cron-uptime.png)
 
 ##### Удалите все задания из планировщика заданий.
 - В отчёт вставьте скрин со списком текущих заданий для CRON.
-![crontab-remove](misc/img/part-crontab-remove.png)
+![crontab-remove](../misc/img/part-crontab-remove.png)
